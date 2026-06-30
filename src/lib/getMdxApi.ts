@@ -10,7 +10,7 @@ const postsDirectory = path.join(process.cwd(), 'content/noticias');
 export async function getPostBySlug(slug: string) {
   try {
     const realSlug = slug.replace(/\.mdx$/, '');
-    //console.log(realSlug)
+    console.log(realSlug)
     const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     console.log(fileContents)

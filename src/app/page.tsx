@@ -5,12 +5,11 @@ import Image from "next/image";
 
 
 export default async function Home(){
-
-  const tituloDestaque = "Nova inteligência artificial promete revolucionar a criação de conteúdo e o desenvolvimento web em 2026";
   
   const posts = await getAllPosts();
-  let slug:string = posts[0].postsDefinitivos[0];
-  console.log(posts[0].postsDefinitivos[0]);
+  let slug:string = posts[1].postsDefinitivos[0];
+  console.log(posts[1].postsDefinitivos[0]);
+  //Estilizar o texto da noticia que vem do arquivo mdx para ter titulos e outras estilizações nos textos.
   //Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map().
   
 

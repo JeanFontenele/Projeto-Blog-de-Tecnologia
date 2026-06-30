@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/lib/getMdxApi";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import rehypeRaw from "rehype-raw";
 
 export default async function PaginaSingle({ params }: { params: { slug: string } }) {
     // Decodifica o slug para obter o título original (aproximado)
@@ -46,7 +47,7 @@ export default async function PaginaSingle({ params }: { params: { slug: string 
                             </div>
 
                             {/* Conteúdo do Texto */}
-                            <div className="prose prose-lg max-w-none text-gray-800">
+                            <div className="prose prose-lg max-w-none prose-headings:font-black prose-h2:text-3xl prose-h2:text-gray-900 prose-p:text-gray-700">
                                 <MDXRemote source={content} />
                             </div>
                         </article>

@@ -11,7 +11,7 @@ interface slugProps {
 export default function ClickParaRota({slug, children}:slugProps){
 
     const router = useRouter();
-    
+    console.log(slug)
     const clickNaNoticia = () => {
         router.push(`/noticias/${slug}`);
     };
