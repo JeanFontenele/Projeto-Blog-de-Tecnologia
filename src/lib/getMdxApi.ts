@@ -13,7 +13,7 @@ export async function getPostBySlug(slug: string) {
     console.log(realSlug)
     const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    console.log(fileContents)
+    //console.log(fileContents)
     // gray-matter separa o 'data' (frontmatter) do 'content' (texto)
     const { data, content } = matter(fileContents);
 
@@ -45,15 +45,16 @@ export async function getAllPosts() {
   
       // Extrai os metadados do topo do arquivo (Frontmatter)
       const { data, content } = matter(fileContents);
-      let postsDefinitivos: any[] = [];
+      /*let postsDefinitivos: any[] = [];
       postsDefinitivos.push(slug);
       postsDefinitivos.push(data);
-      postsDefinitivos.push(content)
-      //console.log(postsDefinitivos)
+      postsDefinitivos.push(content)*/
 
       // Retorna o objeto formatado igual ao que viria de um banco de dados
       return {
-        postsDefinitivos,
+        slug: slug,
+        metadata: data,
+        content: content,
       };
     });
 

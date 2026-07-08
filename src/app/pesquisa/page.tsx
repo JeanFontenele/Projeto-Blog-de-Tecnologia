@@ -27,8 +27,6 @@ export default async function Pesquisa({
 
   return (
     <div className={MontserratFont.className}>
-      <Header />
-      
       <main className="min-h-screen bg-gray-100 py-12 px-4">
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="container">
@@ -44,8 +42,6 @@ export default async function Pesquisa({
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -2,15 +2,18 @@
 import ClickParaRota from "@/components/common/clickParaRota";
 import { getAllPosts } from "@/lib/getMdxApi";
 import Image from "next/image";
+import Link from "next/link";
+
 
 
 export default async function Home(){
   
   const posts = await getAllPosts();
-  let slug:string = posts[1].postsDefinitivos[0];
-  console.log(posts[1].postsDefinitivos[0]);
+  let slug:string = posts[0].slug;
+  //console.log(posts);
   //Estilizar o texto da noticia que vem do arquivo mdx para ter titulos e outras estilizações nos textos.
-  //Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map().
+  //Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map(). Continuar a formação da grade de noticias.
+  //Criar logica para fazer o sistema gravar as vezes que clicam na noticia e contar de forma persistente para exibir na lista de mais lidas.
   
 
 
@@ -29,7 +32,7 @@ export default async function Home(){
                 className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
               >
                 <Image //Continuar ajuste para os itens da noticia ser exibidos aqui na home sem o slug na url, e ao clicar na noticia o slug é ativado e é pego para renderizar a pagina noticia single.
-                  src={posts[1].postsDefinitivos[1].image}
+                  src={posts[0].metadata.image}
                   alt="Imagem de destaque da notícia"
                   layout="fill"
                   objectFit="cover"
@@ -41,61 +44,65 @@ export default async function Home(){
                 
                 {/* Categoria da Notícia */}
                 <span className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
-                  {posts[1].postsDefinitivos[1].category}
+                  {posts[0].metadata.category}
                 </span>
                 
                 {/* Título da Notícia */}
                 <h2 className="text-white text-2xl md:text-4xl font-bold font-sans leading-tight max-w-3xl hover:underline">
-                  {posts[1].postsDefinitivos[1].title}
+                  {posts[0].metadata.title}
                 </h2>
                 
                 {/* Metadados / Linha de apoio */}
                 <p className="text-gray-300 text-sm mt-4">
-                  {posts[1].postsDefinitivos[1].escrito}
+                  {posts[0].metadata.escrito}
                 </p>
                 <p className="text-gray-300 text-sm mt-4">
-                  {posts[1].postsDefinitivos[1].excerpt}
+                  {posts[0].metadata.excerpt}
                 </p>
               </div>
             </div>
           </ClickParaRota>
         </section>
       </div>
-
+      
       {/*SEÇÃO ULTIMAS PUBLICAÇÕES*/}
       <section className="w-full mx-auto py-12 px-4 mb-20">
         <div className="container">
           <h2 className="text-2xl font-bold text-gray-800 mb-8 border-l-4 border-[#0AACDC] pl-4">Últimas Publicações</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Coluna da Esquerda: Grade com 6 cards (2 por linha no desktop) */}
+            {/* Coluna da Esquerda: Grade com 6 cards de noticias */}
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
               {[1, 2, 3, 4].map((item) => {
-                const titulo = `Título da notícia tecnológica para o card número ${item}`;
+                const titulo = posts[item].metadata.title;
+                const slugCard:string = posts[item].slug;
+                console.log(slugCard)
                 return (
                   <div 
                     key={item} 
                     className="card-ultima-publicacao max-h-[700px] h-[450px] bg-white rounded-[5px] overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-200 cursor-pointer group"
                   >
-                  <div className="h-40 bg-gray-200 overflow-hidden">
-                    <div 
-                      className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80')` }}
-                    />
+                    <Link href={`/noticias/${slugCard}`}>
+                    <div className="h-70 bg-gray-200 overflow-hidden">
+                      <div 
+                        className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        style={{ backgroundImage: `url(${posts[item].metadata.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+                      />
+                    </div>
+                    <div className="p-4">
+                      <span className="text-[#0AACDC] text-[10px] font-bold uppercase">Novidades</span>
+                      <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
+                        {titulo}
+                      </h3>
+                      <p className="text-gray-400 text-[11px] mt-3">{posts[item].metadata.date}</p>
+                    </div>
+                    </Link>
                   </div>
-                  <div className="p-4">
-                    <span className="text-[#0AACDC] text-[10px] font-bold uppercase">Novidades</span>
-                    <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
-                      {titulo}
-                    </h3>
-                    <p className="text-gray-400 text-[11px] mt-3">03 de Junho, 2026</p>
-                  </div>
-                </div>
                 );
               })}
             </div>
 
-            {/* Coluna da Direita: Card que preenche a altura */}
+            {/* Coluna da Direita: Mais lidas */}
             <div className="mais-lidas lg:col-span-1">
               <div className="h-full min-h-[400px] relative rounded-[5px] overflow-hidden shadow-lg group cursor-pointer">
                 <div className="text-center p-[40px] bg-[#3F51B5]">
@@ -178,14 +185,14 @@ export default async function Home(){
               <div className="h-full min-h-[400px] relative rounded-[5px] overflow-hidden shadow-lg group cursor-pointer">
                 <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                  style={{ backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80')` }}
+                  style={{ backgroundImage: `url('https://s2-g1.glbimg.com/5MwO5ekITQ7sHUOTOca6-4-TY0s=/3840x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/e/z/aRLIiPQ2C7Wald2aicKA/clair-obscur-expedition-33.jpg')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
                   <span className="bg-[#0AACDC] text-white text-[10px] font-bold px-2 py-1 rounded-sm w-fit mb-4">ESPECIAL</span>
                   <h3 className="text-white text-xl font-bold leading-tight">
-                    O Guia definitivo para o desenvolvimento web em 2026
+                    Quem ganhará o proximo The game awards 
                   </h3>
-                  <p className="text-gray-300 text-sm mt-4">Descubra as tecnologias que estão moldando o futuro da internet.</p>
+                  <p className="text-gray-300 text-sm mt-4">Descubra os games que estão concorrendo.</p>
                   <div className="h-1 w-full bg-[#0AACDC] mt-6 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                 </div>
               </div>

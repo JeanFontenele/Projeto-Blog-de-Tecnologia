@@ -17,12 +17,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'gamevicio.com/wp-content/',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'img.redbull.com',
         port: '',
         pathname: '/**',
@@ -30,6 +24,18 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.prod.website-files.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'flowgames.gg',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's2-g1.glbimg.com',
         port: '',
         pathname: '/**',
       },

@@ -12,7 +12,7 @@ export default async function PaginaSingle({ params }: { params: { slug: string 
     .replace(/\b\w/g, l => l.toUpperCase());
     
     const post = await getPostBySlug(slug);
-    console.log(post)
+    //console.log(post)
     if (!post) {
         notFound();
     }
