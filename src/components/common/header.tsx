@@ -13,7 +13,7 @@ export default function Header(){
     const router = useRouter();
 
     function resultadoPesquisa():void{
-        //Essa função pega o que foi digitado na input de pesquisa do formulário e 
+        //Essa função pega o que foi digitado na input de pesquisa do formulário e formata para adicionar na url.
         const termoPesquisa = termo.trim();
 
         if (!termo) return;

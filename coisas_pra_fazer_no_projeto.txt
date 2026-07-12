@@ -1,0 +1,5 @@
+TODO: Estilizar o texto da noticia que vem do arquivo mdx para ter titulos e outras estilizações nos textos.
+Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map(). Continuar a formação da grade de noticias.
+Criar noticias de tecnologia para colocar na determinada seção da home. trabalhar a função que pega todos os posts para montar um array dividido por tema de noticias. Ou posso criar a logica para procurar no titulo dos arquivos mdx o tema da noticia. (Feito)
+Organizar noticias por tema na home. E colocar nos cards da seção.
+

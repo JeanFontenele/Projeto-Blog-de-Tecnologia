@@ -1,3 +1,4 @@
+//PAGINA DE PESQUISA DE NOTICIAS DE ACORDO COM PALAVRAS CHAVE
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
 import { Montserrat } from "next/font/google";
@@ -24,7 +25,7 @@ export default async function Pesquisa({
 }: PesquisaProps) {
   const params = await searchParams;
   const termo = params.q || "";
-
+  
   return (
     <div className={MontserratFont.className}>
       <main className="min-h-screen bg-gray-100 py-12 px-4">

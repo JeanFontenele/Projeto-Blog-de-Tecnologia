@@ -42,17 +42,17 @@ export async function getAllPosts() {
       // Lê o conteúdo do arquivo
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
-  
+      
+      const [nomeSlug, tema] = slug.split("_");
+
       // Extrai os metadados do topo do arquivo (Frontmatter)
       const { data, content } = matter(fileContents);
-      /*let postsDefinitivos: any[] = [];
-      postsDefinitivos.push(slug);
-      postsDefinitivos.push(data);
-      postsDefinitivos.push(content)*/
+      
 
       // Retorna o objeto formatado igual ao que viria de um banco de dados
       return {
-        slug: slug,
+        tema: tema,
+        slug: nomeSlug,
         metadata: data,
         content: content,
       };

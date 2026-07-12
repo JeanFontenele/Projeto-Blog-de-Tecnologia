@@ -1,3 +1,4 @@
+//PAGINA DA NOTICIA SINGLE CLICADA
 import { getPostBySlug } from "@/lib/getMdxApi";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
