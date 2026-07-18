@@ -53,6 +53,7 @@ export async function getAllPosts() {
       return {
         tema: tema,
         slug: nomeSlug,
+        nomeArquivo: slug,
         metadata: data,
         content: content,
       };

@@ -1,5 +1,6 @@
 //PAGINA DA HOME DO PORTAL DE NOTICIAS
 import ClickParaRota from "@/components/common/clickParaRota";
+import DestaqueCarrossel from "@/components/common/destaqueCarrossel";
 import { getAllPosts } from "@/lib/getMdxApi";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,11 +19,15 @@ export default async function Home(){
   let slug:string = posts[1].slug;
   let noticiasGames:any[] = []; 
   let noticiasTecnologia:any[] = [];
-  //console.log(posts);
+  let noticiasDestaque:any[] = [];
+  console.log(posts);
   
   organizaNoticiasPorTema();
   function organizaNoticiasPorTema(){
     for (let i = 0; i < posts.length; i++) {
+      if(i <= 3){
+        noticiasDestaque.push(posts[i]);
+      }
       if(posts[i].tema === "games"){
         noticiasGames.push(posts[i])
       }
@@ -33,6 +38,7 @@ export default async function Home(){
   }
   //console.log(noticiasGames)
   //console.log(noticiasTecnologia)
+  //console.log(noticiasDestaque)
 
 
 
@@ -46,43 +52,13 @@ export default async function Home(){
         <section 
           className="w-full max-w-[900px] h-[500px] rounded-[5px] overflow-hidden shadow-lg group"
         >
-          <ClickParaRota slug = {slug}>
-            <div className="relative w-full h-full">
-              {/* Imagem de Fundo (Simulada via div. No Next.js substitua por <Image />) */}
-              <div 
-                className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-              >
-                <Image //Continuar ajuste para os itens da noticia ser exibidos aqui na home sem o slug na url, e ao clicar na noticia o slug é ativado e é pego para renderizar a pagina noticia single.
-                  src={posts[0].metadata.image}
-                  alt="Imagem de destaque da notícia"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-
-              {/* Máscara de gradiente e Container do Texto posicionado por cima */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
-                
-                {/* Categoria da Notícia */}
-                <span className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
-                  {posts[0].metadata.category}
-                </span>
-                
-                {/* Título da Notícia */}
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-sans leading-tight max-w-3xl hover:underline">
-                  {posts[0].metadata.title}
-                </h2>
-                
-                {/* Metadados / Linha de apoio */}
-                <p className="text-gray-300 text-sm mt-4">
-                  {posts[0].metadata.escrito}
-                </p>
-                <p className="text-gray-300 text-sm mt-4">
-                  {posts[0].metadata.excerpt}
-                </p>
-              </div>
+          
+            <div className="relative w-full h-full"
+            >
+              {/* Imagem de Fundo */}
+              <DestaqueCarrossel noticiaDestaque={noticiasDestaque}/>
             </div>
-          </ClickParaRota>
+          
         </section>
       </div>
       
@@ -258,6 +234,8 @@ export default async function Home(){
                 </div>
               ))}
 
+              {/*CARDS DE PRÉVIAS*/}
+              <h2 className="md:col-span-2 text-2xl font-bold text-gray-800 mt-8 border-l-4 border-[#0AACDC] pl-4">PREVIEWS</h2>
               {[0, 1].map((i) => (
                 <div key={i} className="h-[200px] bg-white rounded-[5px] overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-200 cursor-pointer group">
                   
