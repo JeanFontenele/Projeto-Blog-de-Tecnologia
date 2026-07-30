@@ -19,7 +19,7 @@ const bulletsCarrossel = {
 export default function DestaqueCarrossel({noticiaDestaque}:{noticiaDestaque:any[]}){
     const [index, setIndex] = useState(0);
     const imagensCarrossel = noticiaDestaque.map((item) => item.metadata.image);
-    console.log(noticiaDestaque)
+    //console.log(noticiaDestaque)
     //console.log(noticiaDestaque[index].nomeArquivo)
     
 
