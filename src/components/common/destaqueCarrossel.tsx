@@ -18,64 +18,95 @@ const bulletsCarrossel = {
 
 export default function DestaqueCarrossel({noticiaDestaque}:{noticiaDestaque:any[]}){
     const [index, setIndex] = useState(0);
-    const imagensCarrossel = noticiaDestaque.map((item) => item.metadata.image);
+
     //console.log(noticiaDestaque)
     //console.log(noticiaDestaque[index].nomeArquivo)
     
-
-
     useEffect(() => {
+        // Garante que o timer não rode se o array estiver vazio
+        if (!noticiaDestaque || noticiaDestaque.length === 0) return;
+
         const interval = setInterval(() => {
-            setIndex(prevIndex => (prevIndex + 1) % imagensCarrossel.length);
-        }, 2000);
+            setIndex(prevIndex => (prevIndex + 1) % noticiaDestaque.length);
+        }, 3000);
 
         return () => clearInterval(interval); // Limpa o intervalo quando o componente é desmontado
-    }, []); // Array de dependências vazio para executar o efeito apenas uma vez
+    }, [noticiaDestaque.length,index]); 
+    
+    if (!noticiaDestaque || noticiaDestaque.length === 0) return null;
+
+    // Função para tratar o clique na bullet
+    const irParaSlide = (i:number) => {
+        setIndex(i); // O CSS com translateX se encarrega da animação suave
+    };
+
+    
+
+
 
     return(
-        <div className="relative w-full h-full">
-            <div 
-            className="box-carrossel w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out"
-            >
-                {/*continuar criação de slide carrossel*/}
-                <Image 
-                    src={imagensCarrossel[index]}
-                    alt="Imagem de destaque da notícia"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-opacity duration-1000 ease-in-out"
-                    key={index} // Adicionado para forçar a re-renderização da imagem
-                />
-            </div>
-            {/* Máscara de gradiente e Container do Texto posicionado por cima */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
+        <div>
+            <section className="w-full flex justify-center items-center py-5">
+                {/* .carrosselContainer */}
+                <div 
+                className="relative w-full max-w-[1100px] h-[450px] rounded-lg overflow-hidden shadow-[0_10px_25px_rgba(0,0,0,0.15)]"
+                >
+                    {/* .carrosselTrilho - O trilho desliza de acordo com o índice calculado no estado */}
+                    <div className="flex w-full h-full transition-transform duration-600 ease-in-out"
+                        style={{ transform: `translateX(-${index * 100}%)` }}
+                    >
+                        {noticiaDestaque.map((post) => (
+                            /* .carrosselSlide */
+                        <div key={post.id || post.slug} className="min-w-full h-full relative">
+                            {/* .carrosselImagem */}
+                            <Image 
+                                src={post.metadata.image} 
+                                alt={post.metadata.title} 
+                                fill
+                                priority={index === 0}
+                                className="object-cover block" 
+                            />
+                        </div>
+                        ))}
+                    </div>
+                </div>
+                {/* Máscara de gradiente e Container do Texto posicionado por cima */}
+                <div className="absolute bottom-0 left-0 right-0 p-[30px] bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white">
 
-                {/* Categoria da Notícia */}
-                <span className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
-                    {noticiaDestaque[index].metadata.category}
-                </span>
-                
-                {/* Título da Notícia */}
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-sans leading-tight max-w-3xl hover:underline">
-                    <Link href={`/noticias/${noticiaDestaque[index].nomeArquivo}`}>
-                        {noticiaDestaque[index].metadata.title}
-                    </Link>
-                </h2>
-                
-                {/* Metadados / Linha de apoio */}
-                <p className="text-gray-300 text-sm mt-4">
-                    {noticiaDestaque[index].metadata.escrito}
-                </p>
-                <p className="text-gray-300 text-sm mt-4">
-                    {noticiaDestaque[index].metadata.excerpt}
-                </p>
-            </div>
+                    {/* Categoria da Notícia */}
+                    <span className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">
+                        {noticiaDestaque[index].metadata.category}
+                    </span>
+                    
+                    {/* Título da Notícia */}
+                    <h2 className="text-white text-2xl md:text-4xl font-bold font-sans leading-tight max-w-3xl hover:underline">
+                        <Link href={`/noticias/${noticiaDestaque[index].nomeArquivo}`}>
+                            {noticiaDestaque[index].metadata.title}
+                        </Link>
+                    </h2>
+                    
+                    {/* Metadados / Linha de apoio */}
+                    <p className="text-gray-300 text-sm mt-4">
+                        {noticiaDestaque[index].metadata.escrito}
+                    </p>
+                    <p className="text-gray-300 text-sm mt-4">
+                        {noticiaDestaque[index].metadata.excerpt}
+                    </p>
+                </div>
 
-            <div style={bulletPai} className="bullets flex absolute bottom-5 text-center">
-                {imagensCarrossel.map((_, i) => (
-                    <span key={i} style={{...bulletsCarrossel, backgroundColor: i === index ? '#0AACDC' : 'white'}}></span>
-                ))}
-            </div>
+                <div style={bulletPai} className="bullets flex absolute bottom-5 text-center">
+                    {noticiaDestaque.map((_, i) => (
+                        <span key={i} 
+                        onClick={() => irParaSlide(i)} 
+                        style={{...bulletsCarrossel, backgroundColor: i === index ? '#0AACDC' : 'white'}} 
+                        className={`cursor-pointer ${
+                            index === i 
+                            ? 'w-8 bg-blue-500' // Bullet ativa esticada e azul
+                            : 'w-3 bg-white/60 hover:bg-white' // Bullet inativa menor e translúcida
+                        }`}></span>
+                    ))}
+                </div>
+            </section>
         </div>
     )
 

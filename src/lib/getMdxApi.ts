@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { formatDate } from '@/lib/ajustandoDataApi';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
 const postsDirectory = path.join(process.cwd(), 'content/noticias');
@@ -10,7 +11,7 @@ const postsDirectory = path.join(process.cwd(), 'content/noticias');
 export async function getPostBySlug(slug: string) {
   try {
     const realSlug = slug.replace(/\.mdx$/, '');
-    console.log(realSlug)
+    //console.log(realSlug)
     const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     //console.log(fileContents)
@@ -47,7 +48,9 @@ export async function getAllPosts() {
 
       // Extrai os metadados do topo do arquivo (Frontmatter)
       const { data, content } = matter(fileContents);
-      
+      //console.log(data)
+      const formatoData = formatDate(data.date)
+      console.log(formatoData)
 
       // Retorna o objeto formatado igual ao que viria de um banco de dados
       return {

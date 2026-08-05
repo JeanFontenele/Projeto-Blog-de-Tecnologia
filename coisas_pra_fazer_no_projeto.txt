@@ -5,7 +5,7 @@ Criar noticias de tecnologia para colocar na determinada seção da home. trabal
 
 Organizar noticias por tema na home. E colocar nos cards da seção. 
 
-Fazer slide de imagens carrosel na seção destaque da home.
+Fazer slide de imagens carrosel na seção destaque da home. 
 
 Formatar data nos posts para organizar array de noticias de forma decrescente.
 
