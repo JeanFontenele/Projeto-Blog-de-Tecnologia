@@ -1,12 +1,15 @@
 TODO: Estilizar o texto da noticia que vem do arquivo mdx para ter titulos e outras estilizações nos textos.
+
 Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map(). Continuar a formação da grade de noticias. (Feito)
 
 Criar noticias de tecnologia para colocar na determinada seção da home. trabalhar a função que pega todos os posts para montar um array dividido por tema de noticias. Ou posso criar a logica para procurar no titulo dos arquivos mdx o tema da noticia. (Feito)
 
-Organizar noticias por tema na home. E colocar nos cards da seção. 
+Organizar noticias por tema na home. E colocar nos cards da seção. (Uma ideia pra a url continuar amigavel é adicionar uma chave dentro de metadados no mdx com o nome "tema" e o valor sendo o tema que será preciso pra carregar as noticias na home, na api será pego essa chave e adicionado a variavel que será retornada pela função exportada, na pagina home pegará essa chave e no loop que cria os outros arrays pega e separa as noticias pela chame tema, assim quando clica na noticia a url fica amigavel sem precisar colocar o "_temadanoticia" no final da url)
 
-Fazer slide de imagens carrosel na seção destaque da home. 
+Fazer slide de imagens carrosel na seção destaque da home. (Feito, falta estilizar)
 
-Formatar data nos posts para organizar array de noticias de forma decrescente.
+Estilizar a seção destaque para a imagem que aparece dentro do slide carrossel, aparecer fracamente no fundo da seção.(Feito)
+
+Formatar data nos posts para organizar array de noticias de forma decrescente. (Feito)
 
 Fazer conexão com banco de dados mysql e criar tabela para armazenar numero de clicks em determinada noticia e linkar com a noticia do arquivo mdx criando id dentro do mdx para linkar com o numero de clicks na tabela. 

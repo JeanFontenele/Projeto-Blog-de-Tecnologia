@@ -36,7 +36,7 @@ export default function Header(){
                         <nav>
                             <ul className="flex gap-6">
                                 <li>
-                                    <Link href="/">Noticias</Link>
+                                    <Link href="/noticias">Noticias</Link>
                                 </li>
 
                                 <li>

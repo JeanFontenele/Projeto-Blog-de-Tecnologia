@@ -21,3 +21,30 @@ export function formatDate(dateString: string): string {
 
   return `${parseInt(day, 10)} de ${monthNames[monthIndex]} de ${year}`;
 }
+
+
+
+
+export function organizaNoticiasPorData(posts: any[]): any[] {
+  //Vai organizar as noticias num novo array por data no sentido decrescente
+  // Cria uma cópia do array para não modificar o original
+  const postsOrdenados = [...posts];
+  //console.log(postsOrdenados)
+
+  postsOrdenados.sort((a, b) => {
+    // Função para converter "DD/MM/AAAA" para um objeto Date
+    const stringParaData = (dateString: string): Date => {
+      const [day, month, year] = dateString.split('/').map(Number);
+      return new Date(year, month - 1, day);
+    };
+    //console.log(b)
+
+    const dataA = stringParaData(a.metadata.date);
+    const dataB = stringParaData(b.metadata.date);
+
+    // Compara as datas em ordem decrescente (da mais nova para a mais antiga)
+    return dataB.getTime() - dataA.getTime();
+  });
+
+  return postsOrdenados;
+}

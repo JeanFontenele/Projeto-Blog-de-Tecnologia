@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { formatDate } from '@/lib/ajustandoDataApi';
+import { organizaNoticiasPorData } from '@/lib/ajustandoDataApi';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
 const postsDirectory = path.join(process.cwd(), 'content/noticias');
@@ -50,7 +51,7 @@ export async function getAllPosts() {
       const { data, content } = matter(fileContents);
       //console.log(data)
       const formatoData = formatDate(data.date)
-      console.log(formatoData)
+      //console.log(formatoData)
 
       // Retorna o objeto formatado igual ao que viria de um banco de dados
       return {
@@ -59,11 +60,13 @@ export async function getAllPosts() {
         nomeArquivo: slug,
         metadata: data,
         content: content,
+        formatoData: formatoData,
       };
     });
+    const noticiasDecrescentes = organizaNoticiasPorData(allPostsData);
+    //console.log(noticiasDecrescentes)
 
-    //console.log(allPostsData);
   // 2. Ordena as notícias da mais recente para a mais antiga (opcional, baseado na data)
   // Se suas datas forem strings complexas, você pode adicionar um campo 'timestamp' no MDX para ordenar melhor.
-  return allPostsData;
+  return noticiasDecrescentes;
 }

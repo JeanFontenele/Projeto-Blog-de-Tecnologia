@@ -1,5 +1,4 @@
 //PAGINA DA HOME DO PORTAL DE NOTICIAS
-import ClickParaRota from "@/components/common/clickParaRota";
 import DestaqueCarrossel from "@/components/common/destaqueCarrossel";
 import { getAllPosts } from "@/lib/getMdxApi";
 import Image from "next/image";
@@ -16,7 +15,7 @@ const MontserratFont = Montserrat({
 export default async function Home(){
   
   const posts = await getAllPosts();
-  let slug:string = posts[1].slug;
+  //let slug:string = posts[1].slug;
   let noticiasGames:any[] = []; 
   let noticiasTecnologia:any[] = [];
   let noticiasDestaque:any[] = [];
@@ -46,21 +45,11 @@ export default async function Home(){
 
   return(
     <div className={MontserratFont.className}>
+      
       {/*SEÇÃO DESTAQUE*/}
-      <div className="secao-destaque min-h-screen w-full flex items-center justify-center bg-gray-100 p-4">
-        {/* Box Principal com 1100px de largura máxima e bordas de 5px (rounded-[5px]) */}
-        <section 
-          className="w-full max-w-[900px] h-[500px] rounded-[5px] overflow-hidden shadow-lg group"
-        >
-          
-            <div className="relative w-full h-full"
-            >
-              {/* Imagem de Fundo */}
-              <DestaqueCarrossel noticiaDestaque={noticiasDestaque}/>
-            </div>
-          
-        </section>
-      </div>
+      <section>
+        <DestaqueCarrossel noticiaDestaque={noticiasDestaque}/>
+      </section>      
       
       {/*SEÇÃO ULTIMAS PUBLICAÇÕES*/}
       <section className="w-full mx-auto py-12 px-4 mb-20">
@@ -91,7 +80,7 @@ export default async function Home(){
                       <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
                         {titulo}
                       </h3>
-                      <p className="text-gray-400 text-[11px] mt-3">{noticiasGames[item].metadata.date}</p>
+                      <p className="text-gray-400 text-[11px] mt-3">{noticiasGames[item].formatoData}</p>
                     </div>
                     </Link>
                   </div>
@@ -166,7 +155,7 @@ export default async function Home(){
                             {post.metadata.title}
                           </h3>
                           <p className="text-gray-500 text-sm mt-3 line-clamp-2">{post.metadata.excerpt}</p>
-                          <p className="text-gray-400 text-xs mt-auto pt-2">{post.metadata.date}</p>
+                          <p className="text-gray-400 text-xs mt-auto pt-2">{post.formatoData}</p>
                         </div>
                       </div>
                     </Link>
@@ -229,7 +218,7 @@ export default async function Home(){
                     <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
                       {noticiasTecnologia[item].metadata.title}
                     </h3>
-                    <p className="text-gray-400 text-[11px] mt-3">{noticiasTecnologia[item].metadata.date}</p>
+                    <p className="text-gray-400 text-[11px] mt-3">{noticiasTecnologia[item].formatoData}</p>
                   </div>
                 </div>
               ))}
