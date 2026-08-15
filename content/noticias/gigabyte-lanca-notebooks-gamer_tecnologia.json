@@ -1,0 +1,13 @@
+{
+    "metadados": {
+        "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+        "escrito": "Por Lorem Ipsum",
+        "date": "06/07/2026",
+        "category": "Tecnologia",
+        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://images.pexels.com/photos/4491606/pexels-photo-4491606.jpeg?_gl=1*128003v*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzIyNTEkajEkbDAkaDA."
+    },
+    "content": [
+        {"type": "paragrafo", "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+    ]
+}

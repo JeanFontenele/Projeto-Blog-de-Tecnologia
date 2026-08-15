@@ -1,0 +1,13 @@
+{
+    "metadados": {
+        "title": "Consectetur Adipiscing Elit",
+        "escrito": "Por Lorem Ipsum",
+        "date": "29/07/2026",
+        "category": "Tecnologia",
+        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": "https://images.pexels.com/photos/326511/pexels-photo-326511.jpeg?_gl=1*28f1l4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI1OTAkajQ1JGwwJGgw"
+    },
+    "content": [
+        {"type": "paragrafo", "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+    ]
+}

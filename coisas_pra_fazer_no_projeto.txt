@@ -6,10 +6,12 @@ Criar noticias de tecnologia para colocar na determinada seção da home. trabal
 
 Organizar noticias por tema na home. E colocar nos cards da seção. (Uma ideia pra a url continuar amigavel é adicionar uma chave dentro de metadados no mdx com o nome "tema" e o valor sendo o tema que será preciso pra carregar as noticias na home, na api será pego essa chave e adicionado a variavel que será retornada pela função exportada, na pagina home pegará essa chave e no loop que cria os outros arrays pega e separa as noticias pela chame tema, assim quando clica na noticia a url fica amigavel sem precisar colocar o "_temadanoticia" no final da url)
 
-Fazer slide de imagens carrosel na seção destaque da home. (Feito, falta estilizar)
+Fazer slide de imagens carrosel na seção destaque da home. (Feito)
 
 Estilizar a seção destaque para a imagem que aparece dentro do slide carrossel, aparecer fracamente no fundo da seção.(Feito)
 
 Formatar data nos posts para organizar array de noticias de forma decrescente. (Feito)
+
+Criar painel administrativo para adicionar as noticias.
 
 Fazer conexão com banco de dados mysql e criar tabela para armazenar numero de clicks em determinada noticia e linkar com a noticia do arquivo mdx criando id dentro do mdx para linkar com o numero de clicks na tabela. 

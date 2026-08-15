@@ -1,0 +1,24 @@
+{
+    "metadados": {
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "escrito": "Por Lorem Ipsum",
+    "date": "26/07/2026",
+    "category": "Games",
+    "tema": "Games",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://images.pexels.com/photos/7862595/pexels-photo-7862595.jpeg?_gl=1*1x96047*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzIzMTYkajIxJGwwJGgw"
+    },
+    "content": [
+        {"type": "titulo", "value": "Lorem Ipsum Dolor"},
+        {"type": "paragrafo", "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+        {"type": "paragrafo", "value": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."},
+        {"type": "lista", "itens": ["Lorem ipsum", "Dolor sit amet"]},
+        {"type": "imagem", "value": "https://images.unsplash.com/photo-1598550476439-684efa069c53?q=80&w=2070&auto=format&fit=crop"},
+        {"type": "subtitulo2", "value": "Lorem Ipsum Subtitle"},
+        {"type": "lista", "itens": ["Lorem ipsum", "Dolor sit amet", "Consectetur adipiscing", "Sed do eiusmod"]},
+        {"type": "subtitulo2", "value": "Lorem Ipsum Subtitle Two"},
+        {"type": "lista", "itens": ["Lorem ipsum", "Dolor sit amet", "Consectetur adipiscing", "Sed do eiusmod", "Tempor incididunt", "Ut labore"]},
+        {"type": "paragrafo", "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
+        {"type": "subtitulo2", "value": "Lorem Ipsum Final Subtitle"}
+    ]
+}

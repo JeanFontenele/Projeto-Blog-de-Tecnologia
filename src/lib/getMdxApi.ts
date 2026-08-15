@@ -11,14 +11,17 @@ const postsDirectory = path.join(process.cwd(), 'content/noticias');
 // Função para buscar a notícia específica pelo slug
 export async function getPostBySlug(slug: string) {
   try {
-    const realSlug = slug.replace(/\.mdx$/, '');
+    const realSlug = slug.replace(/\.json$/, '');
     //console.log(realSlug)
-    const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
+    const fullPath = path.join(postsDirectory, `${realSlug}.json`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    //console.log(fileContents)
+    const dados = JSON.parse(fileContents);
+    //console.log(dados)
     // gray-matter separa o 'data' (frontmatter) do 'content' (texto)
-    const { data, content } = matter(fileContents);
-
+    //const { data, content } = matter(fileContents);
+    const data = dados.metadados;
+    const content = dados.content;
+    //console.log(content)
     return {
       slug: realSlug,
       metadata: data,
@@ -36,22 +39,23 @@ export async function getAllPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
   
   const allPostsData = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx')) // Garante que só vai ler arquivos mdx
+    .filter((fileName) => fileName.endsWith('.json')) // Garante que só vai ler arquivos mdx
     .map((fileName) => {
       // O slug será o nome do arquivo sem a extensão .mdx
-      const slug = fileName.replace(/\.mdx$/, '');
+      const slug = fileName.replace(/\.json$/, '');
       
       // Lê o conteúdo do arquivo
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
-      
+      const dados = JSON.parse(fileContents);
       const [nomeSlug, tema] = slug.split("_");
 
-      // Extrai os metadados do topo do arquivo (Frontmatter)
-      const { data, content } = matter(fileContents);
+      // Extrai os metadados do topo do arquivo
+      const data = dados.metadados;
+      const content = dados.content;
+    
       //console.log(data)
       const formatoData = formatDate(data.date)
-      //console.log(formatoData)
 
       // Retorna o objeto formatado igual ao que viria de um banco de dados
       return {

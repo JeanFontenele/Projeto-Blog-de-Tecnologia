@@ -23,7 +23,7 @@ export default async function paginaNoticias(){
                         //const post = noticiasTecnologia[indice] || posts[indice]; // Fallback para posts
                         
                         
-                        let slug:string = posts[indice].nomeArquivo;
+                        let slug:string = posts[indice].nomeArquivo;    
                         
                         return (
                             <div key={indice}>
@@ -39,8 +39,8 @@ export default async function paginaNoticias(){
                                     />
                                     </div>
                                     <div className="w-2/3 p-5 flex flex-col justify-center">
-                                    <span className="text-[#0AACDC] text-xs font-bold uppercase">{posts[indice].tema}</span>
-                                    <h3 className="font-bold text-lg mt-2 leading-tight line-clamp-3 group-hover:text-[#0AACDC] transition-colors">
+                                    <span className="text-[#2563EB] text-xs font-bold uppercase">{posts[indice].tema}</span>
+                                    <h3 className="font-bold text-[#0F172A] text-lg mt-2 leading-tight line-clamp-3 group-hover:text-[#38BDF8] transition-colors">
                                         {posts[indice].metadata.title}
                                     </h3>
                                     <p className="text-gray-500 text-sm mt-3 line-clamp-2">{posts[indice].metadata.excerpt}</p>

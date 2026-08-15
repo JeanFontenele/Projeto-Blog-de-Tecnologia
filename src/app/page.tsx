@@ -54,7 +54,7 @@ export default async function Home(){
       {/*SEÇÃO ULTIMAS PUBLICAÇÕES*/}
       <section className="w-full mx-auto py-12 px-4 mb-20">
         <div className="container">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 border-l-4 border-[#0AACDC] pl-4">Últimas Publicações</h2>
+          <h2 className="text-2xl font-bold text-[#0F172A] mb-8 border-l-4 border-[#38BDF8] pl-4">Últimas Publicações</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Coluna da Esquerda: Grade com 6 cards de noticias */}
@@ -76,11 +76,11 @@ export default async function Home(){
                       />
                     </div>
                     <div className="p-4">
-                      <span className="text-[#0AACDC] text-[10px] font-bold uppercase">{noticiasGames[item].tema}</span>
-                      <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
+                      <span className="text-[#2563EB] text-[10px] font-bold uppercase">{noticiasGames[item].tema}</span>
+                      <h3 className="font-bold text-base mt-1 line-clamp-2 text-[#0F172A]">
                         {titulo}
                       </h3>
-                      <p className="text-gray-400 text-[11px] mt-3">{noticiasGames[item].formatoData}</p>
+                      <p className="text-[11px] text-[#0F172A] mt-3">{noticiasGames[item].formatoData}</p>
                     </div>
                     </Link>
                   </div>
@@ -91,7 +91,7 @@ export default async function Home(){
             {/* Coluna da Direita: Reviews */}
             <div className="reviews lg:col-span-1">
               <div className="h-full min-h-[400px] rounded-[5px] overflow-hidden shadow-lg">
-                <div className="text-center p-[40px] bg-[#3F51B5]">
+                <div className="text-center p-4 bg-[#2563EB]">
                   <h4 className="text-white uppercase font-bold">REVIEWS</h4>
                 </div>
 
@@ -110,7 +110,7 @@ export default async function Home(){
                           />
                         </div>
                         <div className="w-2/3">
-                          <span className="font-semibold text-sm text-gray-800 leading-tight group-hover:text-[#0AACDC] transition-colors">{posts[index].metadata.excerpt}</span>
+                          <span className="font-semibold text-sm text-[#0F172A] leading-tight group-hover:text-[#38BDF8] transition-colors">{posts[index].metadata.excerpt}</span>
                         </div>
                       </div>
                       </Link>
@@ -123,10 +123,12 @@ export default async function Home(){
         </div>
       </section>
 
+      <div className="w-[1300px] h-[2px] m-auto bg-[#0F172A]" />
+
       {/*SEÇÃO ARTIGOS*/}        
-      <section className="secao-artigos pt-[50px] pb-[50px] bg-gray-50">
+      <section className="secao-artigos pt-[50px] pb-[90px]">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 border-l-4 border-[#0AACDC] pl-4">Artigos</h2>
+          <h2 className="text-2xl font-bold text-[#0F172A] mb-8 border-l-4 border-[#38BDF8] pl-4">Artigos</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Coluna da Esquerda com 4 cards horizontais */}
             <div className="lg:col-span-2 space-y-6">
@@ -150,8 +152,8 @@ export default async function Home(){
                           />
                         </div>
                         <div className="w-2/3 p-5 flex flex-col justify-center">
-                          <span className="text-[#0AACDC] text-xs font-bold uppercase">{post.tema}</span>
-                          <h3 className="font-bold text-lg mt-2 leading-tight line-clamp-3 group-hover:text-[#0AACDC] transition-colors">
+                          <span className="text-[#2563EB] text-xs font-bold uppercase">{post.tema}</span>
+                          <h3 className="font-bold text-lg mt-2 leading-tight line-clamp-3 group-hover:text-[#38BDF8] transition-colors">
                             {post.metadata.title}
                           </h3>
                           <p className="text-gray-500 text-sm mt-3 line-clamp-2">{post.metadata.excerpt}</p>
@@ -167,7 +169,7 @@ export default async function Home(){
             {/* Coluna da Direita com "As mais lidas" */}
             <div className="lg:col-span-1">
               <div className="h-full rounded-[5px] overflow-hidden bg-white shadow-sm border border-gray-200">
-                <div className="text-center p-4 bg-[#3F51B5]">
+                <div className="text-center p-4 bg-[#2563EB]">
                   <h4 className="text-white uppercase font-bold">As mais lidas</h4>
                 </div>
 
@@ -184,7 +186,7 @@ export default async function Home(){
                           className="group-hover:scale-105 transition-transform" 
                           />
                         </div>
-                        <h5 className="font-semibold text-sm text-gray-800 leading-tight group-hover:text-[#0AACDC] transition-colors">
+                        <h5 className="font-semibold text-sm text-[#0F172A] leading-tight group-hover:text-[#38BDF8] transition-colors">
                           {item.metadata.title}
                         </h5>
                       </div>
@@ -197,10 +199,12 @@ export default async function Home(){
         </div>
       </section>
 
+      <div className="w-[1300px] h-[2px] m-auto bg-[#0F172A]" />
+
       {/*SEÇÃO TECNOLOGIA*/}
-      <section className="w-full mx-auto py-12 px-4 mb-20">
+      <section className="w-full mx-auto py-12 px-4 pt-[90px] mb-20">
         <div className="container">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 border-l-4 border-[#0AACDC] pl-4">Tecnologia</h2>
+          <h2 className="text-2xl font-bold text-[#0F172A] mb-8 border-l-4 border-[#38BDF8] pl-4">Tecnologia</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Coluna da Esquerda: Grade com 4 cards (2 por linha no desktop) */}
@@ -214,15 +218,15 @@ export default async function Home(){
                     />
                   </div>
                   <div className="p-4">
-                    <span className="text-[#0AACDC] text-[10px] font-bold uppercase">Novidades</span>
-                    <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#0AACDC] transition-colors">
+                    <span className="text-[#2563EB] text-[10px] font-bold uppercase">Novidades</span>
+                    <h3 className="font-bold text-base mt-1 line-clamp-2 group-hover:text-[#38BDF8] transition-colors">
                       {noticiasTecnologia[item].metadata.title}
                     </h3>
                     <p className="text-gray-400 text-[11px] mt-3">{noticiasTecnologia[item].formatoData}</p>
                   </div>
                 </div>
               ))}
-
+              {/* TODO: Os cards abaixo são estáticos. Considere torná-los dinâmicos e aplicar a paleta de cores. */}
               {/*CARDS DE PRÉVIAS*/}
               <h2 className="md:col-span-2 text-2xl font-bold text-gray-800 mt-8 border-l-4 border-[#0AACDC] pl-4">PREVIEWS</h2>
               {[0, 1].map((i) => (
@@ -231,24 +235,24 @@ export default async function Home(){
                   {i === 0 ? (
                     <div 
                       className="relative z-0 w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80')` }}
+                      style={{ backgroundImage: `url('https://images.pexels.com/photos/15063057/pexels-photo-15063057.jpeg?_gl=1*fc7idn*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzE3NjkkajU5JGwwJGgw')` }}
                     >
                       <div className="absolute top-0 left-0 w-full h-full z-10 bg-[rgba(0,0,0,0.5)]">
                         <div className="z-20 text-white max-w-[300px] pl-[7%] pt-[20px]">
-                          <h5 className="text-[#FFD430] font-bold">Arquitetura</h5>
-                          <p>Veja as obras premiadas do famoso arquiteto Oscar Niemeyer que estão em exposição no Museu da Arquitetura Moderna em Milão.</p>
+                          <h5 className="text-[#FFD430] font-bold">Novidades</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                       </div>  
                     </div>
                   ) : (
                     <div 
                       className="relative z-0 w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                      style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80')` }}
+                      style={{ backgroundImage: `url('https://images.pexels.com/photos/15063057/pexels-photo-15063057.jpeg?_gl=1*fc7idn*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzE3NjkkajU5JGwwJGgw')` }}
                     >
                       <div className="absolute top-0 left-0 w-full h-full z-10 bg-[rgba(0,0,0,0.5)]">
                         <div className="z-20 text-white max-w-[300px] pl-[7%] pt-[20px]">
-                          <h5 className="text-[#40BE65] font-bold">Natureza</h5>
-                          <p>Veja como os lagos congelados ficam ano após ano nesse incrível time lapse gravado durante 45 anos em uma expedição à Antartica.</p>
+                          <h5 className="text-[#40BE65] font-bold">Novidade</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                       </div>
                     </div>
@@ -262,15 +266,15 @@ export default async function Home(){
               <div className="h-full min-h-[400px] relative rounded-[5px] overflow-hidden shadow-lg group cursor-pointer">
                 <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                  style={{ backgroundImage: `url('https://s2-g1.glbimg.com/5MwO5ekITQ7sHUOTOca6-4-TY0s=/3840x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/e/z/aRLIiPQ2C7Wald2aicKA/clair-obscur-expedition-33.jpg')` }}
+                  style={{ backgroundImage: `url('https://images.pexels.com/photos/15063057/pexels-photo-15063057.jpeg?_gl=1*fc7idn*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzE3NjkkajU5JGwwJGgw')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
-                  <span className="bg-[#0AACDC] text-white text-[10px] font-bold px-2 py-1 rounded-sm w-fit mb-4">ESPECIAL</span>
+                  <span className="bg-[#38BDF8] text-white text-[10px] font-bold px-2 py-1 rounded-sm w-fit mb-4">ESPECIAL</span>
                   <h3 className="text-white text-xl font-bold leading-tight">
                     Quem ganhará o proximo The game awards 
                   </h3>
                   <p className="text-gray-300 text-sm mt-4">Descubra os games que estão concorrendo.</p>
-                  <div className="h-1 w-full bg-[#0AACDC] mt-6 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                  <div className="h-1 w-full bg-[#38BDF8] mt-6 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                 </div>
               </div>
             </div>

@@ -4,8 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { useRouter } from "next/navigation";
+import { Montserrat } from "next/font/google";
 
+const MontserratFont = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+});
 
+/*  
+    div da logo
+    <div style={{backgroundImage: `url(/logo.jpeg)`, backgroundSize: 'cover', backgroundPosition: 'center',width:'170px',height:'71px',backgroundRepeat: 'no-repeat'}} className=""></div>
+*/
 
 export default function Header(){
 
@@ -23,33 +32,39 @@ export default function Header(){
     
 
     return(
-        <div>
-            <header className="cabecalho bg-[#0AACDC] text-white p-8">
-                <div className="max-w-screen-xl mx-auto">
-                    <div className="flex justify-between">
-                        <div>
-                            <Link href="/">
-                                Logo
+        <div className={MontserratFont.className}>
+            <header className="cabecalho bg-[#0F172A] text-white p-8">
+                <div className="max-w-[1200px] mx-auto">
+                    <div className="flex justify-between items-center">
+                        <div className="logo">
+                            <Link className="logo-link" href="/">
+                                LOGO
                             </Link>
                         </div>
 
                         <nav>
                             <ul className="flex gap-6">
-                                <li>
-                                    <Link href="/noticias">Noticias</Link>
+                                <li className="relative group">
+                                    <Link href="/noticias" className="text-[17px] transition-colors group-hover:text-[#38BDF8] after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[6px] after:w-full after:bg-[#38BDF8] after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-[700ms] after:origin-left">
+                                        Noticias
+                                    </Link>
                                 </li>
 
-                                <li>
-                                    <Link href="/dicas">Dicas</Link>
+                                <li className="relative group">
+                                    <Link href="/dicas" className="text-[17px] transition-colors group-hover:text-[#38BDF8] after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[6px] after:w-full after:bg-[#38BDF8] after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-[700ms] after:origin-left">
+                                        Dicas
+                                    </Link>
                                 </li>
 
-                                <li>
-                                    <Link href="/promocoes">Promoções</Link>
+                                <li className="relative group">
+                                    <Link href="/promocoes" className="text-[17px] transition-colors group-hover:text-[#38BDF8] after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[6px] after:w-full after:bg-[#38BDF8] after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-[700ms] after:origin-left">
+                                        Promoções
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>
 
-                        <div>
+                        <div className="busca">
                             <form method="post" className="relative">
                                 <input 
                                     type="text" 

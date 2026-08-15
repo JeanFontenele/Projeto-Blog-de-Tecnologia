@@ -30,13 +30,23 @@
   display: inline-block;
 }
 
-.cabecalho nav > ul > li{
-  transition: 1s;
+.logo{
+  width: 33%;
 }
 
-.cabecalho nav > ul > li:hover{
-  text-decoration: underline;
+header nav{
+  width: 33%;
 }
+
+.busca{
+  width: 33%;
+}
+
+.logo-link{
+  padding-left: 20%;
+}
+
+
 
 .containerPai-noticias-slug > .container{
   max-width: 1400px;

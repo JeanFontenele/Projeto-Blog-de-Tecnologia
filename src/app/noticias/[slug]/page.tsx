@@ -1,9 +1,15 @@
 //PAGINA DA NOTICIA SINGLE CLICADA
 import { getPostBySlug } from "@/lib/getMdxApi";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import rehypeRaw from "rehype-raw";
+import RenderizaNoticia from "@/components/common/RenderizaNoticia";
+import { Montserrat } from "next/font/google";
+
+const MontserratFont = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+});
+
 
 export default async function PaginaSingle({ params }: { params: { slug: string } }) {
     // Decodifica o slug para obter o título original (aproximado)
@@ -17,79 +23,84 @@ export default async function PaginaSingle({ params }: { params: { slug: string 
     if (!post) {
         notFound();
     }
-
-    const { metadata, content } = post;    
+    //const { metadata, content } = post;  
+    //console.log(post)
+  
 
 
 
     return (
-        <div className="py-12 px-4 bg-[#F3F4F6] containerPai-noticias-slug">
-            <div className="container">
-                <div className="container-noticias-slug grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-
-                    {/* Coluna da Esquerda (Conteúdo Noticia) */}
-                    <div className="lg:col-span-2 bg-[#FFFFFF] p-[40px] rounded-[10px]">
-                        <article>
-                            {/* Categoria e Título */}
-                            <div className="mb-6">
-                                <span className="text-blue-500 font-bold uppercase tracking-wider">{metadata.category}</span>
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">{metadata.title}</h1>
-                                <p className="text-gray-500 mt-3">{metadata.escrito}</p>
-                            </div>
-
-                            {/* Imagem da Notícia */}
-                            <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8 shadow-lg">
-                                <Image
-                                    src={metadata.image}
-                                    alt="Imagem de destaque da notícia"
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                            </div>
-
-                            {/* Conteúdo do Texto */}
-                            <div className="prose prose-lg max-w-none prose-headings:font-black prose-h2:text-3xl prose-h2:text-gray-900 prose-p:text-gray-700">
-                                <MDXRemote source={content} />
-                            </div>
-                        </article>
-                    </div>
-
-                    {/* Coluna da Direita (Mais Lidas) */}
-                    <aside className="lg:col-span-1">
-                        <div className="h-full">
-                            {/* Card "Mais Lidas" com estilo similar ao da home */}
-                            <div className="h-full rounded-[5px] overflow-hidden">
-                                <div className="text-center p-4 bg-[#3F51B5]">
-                                    <h4 className="text-white uppercase font-bold">As mais lidas</h4>
+        <div className={MontserratFont.className}>
+            <div className="py-12 px-4 bg-[#F3F4F6] containerPai-noticias-slug">
+                <div className="container">
+                    <div className="container-noticias-slug flex">
+                        {/* Coluna da Esquerda (Conteúdo Noticia) */}
+                        <div className="w-[75%] bg-[#FFFFFF] p-[40px] mr-[20px] rounded-[10px]">
+                            <article>
+                                {/* Categoria e Título */}
+                                <div className="mb-6">
+                                    <span className="text-blue-500 font-bold uppercase tracking-wider">{post.metadata.category}</span>
+                                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">{post.metadata.title}</h1>
+                                    <p className="text-gray-500 mt-3">{post.metadata.escrito}</p>
                                 </div>
-                                <div className="p-[30px] space-y-4 bg-[#FFFFFF] h-full">
-                                    {[
-                                        { title: "Como a computação quântica impactará a segurança de dados", img: "https://upload.wikimedia.org/wikipedia/pt/thumb/b/be/The_Last_of_Us_capa.png/330px-The_Last_of_Us_capa.png" },
-                                        { title: "O futuro das interfaces: além das telas", img: "https://upload.wikimedia.org/wikipedia/pt/thumb/b/be/The_Last_of_Us_capa.png/330px-The_Last_of_Us_capa.png" },
-                                        { title: "5G e a Internet das Coisas (IoT): Uma nova era de conectividade", img: "https://images.unsplash.com/photo-1526666923127-b2970f64b422?w=200" },
-                                        { title: "Realidade Aumentada no e-commerce: a próxima fronteira", img: "https://upload.wikimedia.org/wikipedia/pt/thumb/b/be/The_Last_of_Us_capa.png/330px-The_Last_of_Us_capa.png" }
-                                    ].map((item, index) => (
-                                        <div key={index} className="flex items-center gap-4 group cursor-pointer mt-[10px] mb-[40px] w-[100%]">
-                                            <div className="relative w-30 h-30 flex-shrink-0 rounded-md overflow-hidden">
-                                                <Image
-                                                    src={item.img}
-                                                    alt={item.title}
-                                                    layout="fill"
-                                                    objectFit="cover"
-                                                    className="group-hover:scale-105 transition-transform"
-                                                />
-                                            </div>
-                                            <div className="">
-                                                <h5 className="font-semibold text-sm text-gray-800 leading-tight group-hover:text-[#0AACDC] transition-colors">
-                                                    {item.title}
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    
+                                {/* Imagem da Notícia */}
+                                <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8 shadow-lg">
+                                    <Image
+                                        src={post.metadata.image}
+                                        alt="Imagem de destaque da notícia"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
                                 </div>
-                            </div>
+
+                                {/* Conteúdo do Texto */}
+                                <div>
+                                    <RenderizaNoticia conteudo={post.content}/>
+                                </div>
+                            </article>
                         </div>
-                    </aside>
+
+                        {/* Coluna da Direita (Mais Lidas) */}
+                        <aside className="w-[25%]">
+                            <div className="h-full">
+                                {/* Card "Mais Lidas" com estilo similar ao da home */}
+                                <div className="h-full rounded-[5px] overflow-hidden">
+                                    <div className="text-center p-4 bg-[#2563EB]">  
+                                        <h4 className="text-white uppercase font-bold">As mais lidas</h4>
+                                    </div>
+                                    <div className="p-[30px] space-y-4 bg-[#FFFFFF] h-full">
+                                        {[
+                                            { title: "Como a computação quântica impactará a segurança de dados", img: "https://images.pexels.com/photos/35229318/pexels-photo-35229318.jpeg?_gl=1*q5a9g4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI2NzckajU5JGwwJGgw" },
+                                            { title: "O futuro das interfaces: além das telas", img: "https://images.pexels.com/photos/35229318/pexels-photo-35229318.jpeg?_gl=1*q5a9g4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI2NzckajU5JGwwJGgw" },
+                                            { title: "5G e a Internet das Coisas (IoT): Uma nova era de conectividade", img: "https://images.pexels.com/photos/35229318/pexels-photo-35229318.jpeg?_gl=1*q5a9g4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI2NzckajU5JGwwJGgw" },
+                                            { title: "Realidade Aumentada no e-commerce: a próxima fronteira", img: "https://images.pexels.com/photos/35229318/pexels-photo-35229318.jpeg?_gl=1*q5a9g4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI2NzckajU5JGwwJGgw" }
+                                        ].map((item, index) => (
+                                            <div key={index}>
+                                                <div className="flex group cursor-pointer mt-[10px] mb-[40px] w-[100%]">
+                                                    <div className="relative w-1/2 h-30 rounded-md overflow-hidden">
+                                                        <Image
+                                                            src={item.img}
+                                                            alt={item.title}
+                                                            layout="fill"
+                                                            objectFit="cover"
+                                                            className="group-hover:scale-105 transition-transform"
+                                                        />
+                                                    </div>
+                                                    <div className="w-1/2 pl-5">
+                                                        <h5 className="font-bold text-sm text-gray-800 leading-tight group-hover:text-[#0AACDC] transition-colors">
+                                                            {item.title}
+                                                        </h5>
+                                                    </div>
+                                                </div>   
+                                                <div className="w-full h-[1px] bg-gray-200 mb-10"></div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </div>
         </div>
