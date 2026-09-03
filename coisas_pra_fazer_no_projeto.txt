@@ -1,4 +1,4 @@
-TODO: Estilizar o texto da noticia que vem do arquivo mdx para ter titulos e outras estilizações nos textos.
+TODO: Estilizar o texto da noticia que vem do arquivo json para ter titulos e outras estilizações nos textos.
 
 Preciso pegar o que está vindo da api de informações das noticias para montar as demais seções com as noticias correspondentes. Fazer uso da estrutura de repetição para montar os cards de noticias ou usar o metodo map(). Continuar a formação da grade de noticias. (Feito)
 
@@ -14,4 +14,6 @@ Formatar data nos posts para organizar array de noticias de forma decrescente. (
 
 Criar painel administrativo para adicionar as noticias.
 
-Fazer conexão com banco de dados mysql e criar tabela para armazenar numero de clicks em determinada noticia e linkar com a noticia do arquivo mdx criando id dentro do mdx para linkar com o numero de clicks na tabela. 
+Fazer conexão com banco de dados mongodb e criar coleção de documentos para armazenar numero de clicks em determinada noticia e linkar com a noticia do arquivo json criando id dentro do json para linkar com o numero de clicks na tabela. 
+
+estilizar a seção destaque da home deixando o papel de parede mais escuro. Melhorar formulário de login deixando o form com largura reduzida.

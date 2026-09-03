@@ -1,0 +1,33 @@
+{
+    "metadados": {
+        "title": "PlayStation 4: emulador começa a rodar outro clássico no PC",
+        "escrito": "Por Redator",
+        "date": "15/08/2026",
+        "category": "Games",
+        "tema": "games",
+        "excerpt": "O ShadPS4, emulador do PlayStation 4, começou a rodar outro clássico do console da Sony no PC. Confira!",
+        "image": "https://flowgames.gg/wp-content/uploads/2026/01/PlayStation-4.jpg"
+    },
+    "content": [
+        {
+            "type": "paragrafo",
+            "value": "Desde 2024, o ShadPS4, emulador do PlayStation 4, vem chamando a atenção por seu progresso, principalmente com Bloodborne. Já mais recentemente, outro exclusivo do console da Sony começou a funcionar no emulador."
+        },
+        {
+            "type": "subtitulo2",
+            "value": "Emulador do PlayStation 4 roda outro clássico do console"
+        },
+        {
+            "type": "paragrafo",
+            "value": "Uma versão modificada do shadPS4 0.7.1 por TdlifePeng começou a emular o The Order: 1886. Como mostra o vídeo abaixo, o  jogo, em um PC com processador AMD Ryze 5 7600, 32 GB de memória RAM e placa de vídeo NVIDIA GeForce RTX 5060, está com uma performance considerada jogável, mas não atinge os 60 FPS na maior parte do tempo."
+        },
+        {
+            "type": "paragrafo",
+            "value": "Alguns outros vídeos que surgiram no YouTube até mostram taxas de quadros por segundo bem maiores, mas não chegam a exibir trechos de jogabilidade. Isso, claro, pode ser um reflexo ainda de esta versão modificada ter ficado popular somente agora."
+        },
+        {
+            "type": "paragrafo",
+            "value": "Mesmo em um estado jogável, o The Order: 1886 ainda apresenta alguns problemas no emulador do PlayStation 4. A maior parte dos jogadores têm relatado diversos crashes, além de alguns elementos gráficos não serem renderizados corretamente. Recordesjogadores"
+        }
+    ]
+}

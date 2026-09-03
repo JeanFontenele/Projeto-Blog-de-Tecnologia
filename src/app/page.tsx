@@ -19,7 +19,7 @@ export default async function Home(){
   let noticiasGames:any[] = []; 
   let noticiasTecnologia:any[] = [];
   let noticiasDestaque:any[] = [];
-  //console.log(posts);
+  console.log(posts);
   
   organizaNoticiasPorTema();
   function organizaNoticiasPorTema(){
