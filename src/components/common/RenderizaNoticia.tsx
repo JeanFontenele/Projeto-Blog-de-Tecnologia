@@ -18,36 +18,36 @@ export default function RenderizaNoticia({ conteudo }: RenderProps) {
             case 'titulo':
             case 'h1':
               return (
-                <h1 key={index} className="text-3xl font-bold text-[#0F172A] mt-6 mb-2">
+                <h1 key={index} className="text-3xl font-bold text-cyber-neon mt-6 mb-6">
                   {bloco.value}
                 </h1>
               );
             case 'paragrafo':
             case 'p':
               return (
-                <p key={index} className="text-[#0F172A] leading-relaxed">
+                <p key={index} className="text-cyber-text-muted leading-relaxed mt-10 mb-10">
                   {bloco.value}
                 </p>
               );
             case 'subtitulo':
             case 'h2':
               return (
-                <h2 key={index} className="text-2xl font-bold text-[#0F172A] mt-6 mb-2">
+                <h2 key={index} className="text-2xl font-bold text-cyber-neon mt-6 mb-6">
                   {bloco.value}
                 </h2>
               );  
             case 'subtitulo2':
             case 'h3':
               return (
-                <h3 key={index} className="text-xl font-bold text-[#0F172A] mt-6 mb-2">
+                <h3 key={index} className="text-xl font-bold text-cyber-neon mt-10 mb-10">
                   {bloco.value}
                 </h3>
               );  
             case 'lista':
             case 'ul':
               return (
-                <ul key={index} className="list-disc list-inside space-y-1 text-[#0F172A] pl-2">
-                  {bloco.itens?.map((item: string, idx: number) => (
+                <ul key={index} className="list-disc list-inside space-y-1 text-cyber-text-muted pl-2 mt-10 mb-10">
+                  {bloco.value?.map((item: string, idx: number) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
@@ -61,7 +61,7 @@ export default function RenderizaNoticia({ conteudo }: RenderProps) {
                         alt="Imagem de destaque da notícia"
                         width={400}
                         height={300}
-                        className="w-full max-w-[600px] h-auto rounded-md object-cover shadow-sm"
+                        className="w-full max-w-[600px] h-auto rounded-md object-cover shadow-lg border border-cyber-border"
                     />
                 </div>
               );    

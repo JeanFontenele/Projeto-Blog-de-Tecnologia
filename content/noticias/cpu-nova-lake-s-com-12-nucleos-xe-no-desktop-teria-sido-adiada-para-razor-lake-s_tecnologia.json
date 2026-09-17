@@ -1,0 +1,51 @@
+{
+    "metadados": {
+        "title": "CPU Nova Lake-S com 12 núcleos Xe no desktop teria sido \"adiada\" para Razor Lake-S",
+        "escrito": "Por Redator",
+        "date": "15/09/2026",
+        "category": "Tecnologia",
+        "tema": "tecnologia",
+        "excerpt": "Insider que primeiro falou de possível Nova Lake-S com 12 núcleos Xe3P agora diz que CPU passou para outra família da Intel",
+        "image": "https://www.adrenaline.com.br/wp-content/uploads/2026/09/intel-nova-lake-12-nucleos-xe-adia-razor-lake-912x569.jpg"
+    },
+    "content": [
+        {
+            "type": "paragrafo",
+            "value": "Rumores afirmam que a Intel estaria preparando um processador para desktop com gráficos integrados bem competentes, usando um total de 12 núcleos Xe3P. Essa CPU faria sua estreia na família Nova Lake-S, mas agora temos boatos atualizados de que a empresa passou o componente para a geração Razor Lake-S de processadores."
+        },
+        {
+            "type": "paragrafo",
+            "value": "As informações vêm de Jaykihn, conhecido insider em hardware, especialmente para componentes Intel. Foi dele mesmo que veio o primeiro vazamento de que teríamos um Nova Lake-S com 12 núcleos gráficos Xe, e agora, num novo post, ele afirma que a Intel “adiou” a CPU para os Razor Lake-S."
+        },
+        {
+            "type": "paragrafo",
+            "value": "Outros usuários perguntaram no post de Jaykihn se essa mudança impacta algum outro aspecto da configuração do processador, e o insider infelizmente não respondeu até o momento em que publicamos esta notícia."
+        },
+        {
+            "type": "paragrafo",
+            "value": "Dessa forma, por enquanto podemos esperar que vai ser a mesma CPU, principalmente porque outros vazamentos já indicam que os Razor Lake-AX usarão os mesmos núcleos Arctic Wolf e Coyote Cove dos Nova Lake. Assim, possivelmente teremos um processador que precisa de 65W para a iGPU, com 20MB de cache L2 e um total de 16 núcleos da CPU."
+        },
+        {
+            "type": "titulo",
+            "value": "Novo rumor não menciona Nova Lake para notebooks"
+        },
+        {
+            "type": "paragrafo",
+            "value": "Importante ressaltar que o post de Jaykihn se refere especificamente a um processador Nova Lake-S, um modelo para computadores desktop. Dessa forma, não precisamos esperar mudanças neste momento em relação ao que a Intel prepara para sua nova geração em notebooks."
+        },
+        {
+            "type": "imagem",
+            "value": "https://www.adrenaline.com.br/wp-content/uploads/2026/09/intel-nova-lake-12-nucleos-xe-adia-razor-lake-02.jpg"
+        },
+        {
+            "type": "lista",
+            "value": [
+                "Intel Nova Lake pode trazer até 12 núcleos gráficos Xe3P em desktops",
+                "Intel confirma socket LGA-1954 para CPUs Nova Lake-S em site oficial",
+                "Razor Lake-AX",
+                "possível rival das APUs Halo da AMD",
+                "aparece em update do HWiNFO"
+            ]
+        }
+    ]
+}

@@ -17,7 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`antialiased`}
     >
-      <body className={`min-h-full flex flex-col bg-[#F1F5F9]`} cz-shortcut-listen="true">
+      <body className={`min-h-full flex flex-col bg-cyber-bg text-cyber-text-main`} cz-shortcut-listen="true">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

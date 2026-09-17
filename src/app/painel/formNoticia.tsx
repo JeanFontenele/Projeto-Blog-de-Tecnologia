@@ -85,56 +85,58 @@ export async function PainelAdicionaNoticias() {
     return(
         <div className={MontserratFont.className}>
             <div className="container mx-auto p-8">
-                <h2 className="text-3xl font-bold mb-6 text-gray-800">Painel de Adição de Notícias</h2>
+                <div className="flex justify-between items-center mb-6">
+                    <h2 className="text-3xl font-bold text-cyber-surface border-l-4 border-cyber-cyan pl-3">Painel de Adição de Notícias</h2>
 
-                {/* Formulário com a Server Action de Logout */}
-                <form action={fazerLogout}>
-                <button
-                    type="submit"
-                    className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded transition-colors text-sm flex items-center gap-2 cursor-pointer"
-                >
-                    Sair da Sessão
-                </button>
-                </form>
+                    {/* Formulário com a Server Action de Logout */}
+                    <form action={fazerLogout}>
+                    <button
+                        type="submit"
+                        className="bg-red-600/90 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors text-sm flex items-center gap-2 cursor-pointer"
+                    >
+                        Sair da Sessão
+                    </button>
+                    </form>
+                </div>
 
-                <form action={criarNoticia} className="space-y-6 bg-white p-8 rounded-lg shadow-md">
+                <form action={criarNoticia} className="space-y-6 bg-cyber-surface border border-cyber-border p-8 rounded-lg shadow-lg">
                     {/* Metadados */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label htmlFor="title" className="block text-sm font-medium text-gray-700">Título</label>
-                            <input type="text" name="title" id="title" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                            <label htmlFor="title" className="block text-sm font-medium text-cyber-text-muted mb-1">Título</label>
+                            <input type="text" name="title" id="title" required className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                         </div>
                         <div>
-                            <label htmlFor="escrito" className="block text-sm font-medium text-gray-700">Escrito por</label>
-                            <input type="text" name="escrito" id="escrito" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                            <label htmlFor="escrito" className="block text-sm font-medium text-cyber-text-muted mb-1">Escrito por</label>
+                            <input type="text" name="escrito" id="escrito" className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                         </div>
                         <div>
-                            <label htmlFor="date" className="block text-sm font-medium text-gray-700">Data (DD/MM/AAAA)</label>
-                            <input type="text" name="date" id="date" required placeholder="ex: 26/05/2026" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                            <label htmlFor="date" className="block text-sm font-medium text-cyber-text-muted mb-1">Data (DD/MM/AAAA)</label>
+                            <input type="text" name="date" id="date" required placeholder="ex: 26/05/2026" className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface placeholder-cyber-text-muted/50 focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                         </div>
                         <div>
-                            <label htmlFor="category" className="block text-sm font-medium text-gray-700">Categoria</label>
-                            <input type="text" name="category" id="category" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                            <label htmlFor="category" className="block text-sm font-medium text-cyber-text-muted mb-1">Categoria</label>
+                            <input type="text" name="category" id="category" required className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                         </div>
                         <div>
-                            <label htmlFor="category" className="block text-sm font-medium text-gray-700">Tema</label>
-                            <input type="text" name="tema" id="tema" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                            <label htmlFor="tema" className="block text-sm font-medium text-cyber-text-muted mb-1">Tema</label>
+                            <input type="text" name="tema" id="tema" required className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                         </div>
                     </div>
                     <div>
-                        <label htmlFor="image" className="block text-sm font-medium text-gray-700">URL da Imagem de Capa</label>
-                        <input type="url" name="image" id="image" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2" />
+                        <label htmlFor="image" className="block text-sm font-medium text-cyber-text-muted mb-1">URL da Imagem de Capa</label>
+                        <input type="url" name="image" id="image" className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors" />
                     </div>
                     <div>
-                        <label htmlFor="excerpt" className="block text-sm font-medium text-gray-700">Resumo (Excerpt)</label>
-                        <textarea name="excerpt" id="excerpt" rows={3} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2"></textarea>
+                        <label htmlFor="excerpt" className="block text-sm font-medium text-cyber-text-muted mb-1">Resumo (Excerpt)</label>
+                        <textarea name="excerpt" id="excerpt" rows={3} className="block w-full rounded-md bg-cyber-bg border border-cyber-border text-cyber-surface focus:border-cyber-cyan focus:outline-none sm:text-sm p-2 transition-colors"></textarea>
                     </div>
 
                     <div className="conteudo-noticia">
                         <FormularioConteudoNoticia />
                     </div>
 
-                    <button type="submit" className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <button type="submit" className="inline-flex justify-center py-2.5 px-6 border border-transparent text-sm font-bold rounded-md text-black bg-cyber-cyan hover:bg-cyber-cyan-hover focus:outline-none transition-colors cursor-pointer">
                         Salvar Notícia
                     </button>
                 </form>

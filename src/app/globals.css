@@ -1,22 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0f19;
+  --foreground: #f3f4f6;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cyber-bg2: #0b0f19;
+  --color-cyber-bg: #F3F4F6;
+  --color-cyber-surface: #111827;
+  --color-cyber-surface-elevated: #161f30;
+  --color-cyber-header: #070a12;
+  --color-cyber-border: #1e293b;
+  --color-cyber-border-glow: #0e3a52;
+  --color-cyber-neon: #00f0ff;
+  --color-cyber-cyan: #06b6d4;
+  --color-cyber-cyan-hover: #22d3ee;
+  --color-cyber-emerald: #10b981;
+  --color-cyber-amber: #f59e0b;
+  --color-cyber-text-main: #f3f4f6;
+  --color-cyber-text-muted: #dfe4eb;
 }
 
 .container{
@@ -69,7 +74,7 @@ header nav{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
 }
 

@@ -84,7 +84,7 @@ export async function cadastrarUsuario(formData: FormData){
         // 3. Verifica se o nome de usuário já existe na coleção
         const usuarioExistente = await LoginPainel.findOne({ usuario: newUsuario });
         
-        console.log(usuarioExistente)
+        //console.log(usuarioExistente)
         if (usuarioExistente) {
             console.log('Já existe esse nome de usuário cadastrado.');
             return;

@@ -33,7 +33,7 @@ export function FormularioConteudoNoticia() {
 
   
   return (
-    <div className="p-4 bg-white rounded-lg border my-4">
+    <div className="p-4 bg-cyber-bg rounded-lg border border-cyber-border my-4">
       {/* ⚠️ CAMPO OCULTO: Transmite os blocos no FormData da submissão do pai */}
       <input
         type="hidden"
@@ -50,7 +50,7 @@ export function FormularioConteudoNoticia() {
         <select
           value={tipoSelecionado}
           onChange={(e) => setTipoSelecionado(e.target.value)}
-          className="p-2 border rounded"
+          className="p-2 bg-cyber-surface border border-cyber-border rounded text-cyber-text-main focus:border-cyber-cyan focus:outline-none"
         >
           <option value="titulo">Título (H1)</option>
           <option value="subtitulo">Subtitulo (H2)</option>
@@ -62,26 +62,26 @@ export function FormularioConteudoNoticia() {
         <button
           type="button"
           onClick={adicionarCampo}
-          className="bg-blue-600 text-white px-3 py-1 rounded"
+          className="bg-cyber-cyan text-black font-bold px-3 py-1 rounded hover:bg-cyber-cyan-hover transition-colors cursor-pointer"
         >
           + Adicionar Bloco
         </button>
       </div>
 
       {blocos.map((bloco) => (
-        <div key={bloco.id} className="mb-3 p-2 bg-gray-50 border rounded">
-          <span className="text-xs font-bold uppercase text-blue-600">{bloco.type}</span>
+        <div key={bloco.id} className="mb-3 p-3 bg-cyber-surface border border-cyber-border rounded">
+          <span className="text-xs font-bold uppercase text-cyber-cyan">{bloco.type}</span>
           <input
             type="text"
             value={bloco.value}
             onChange={(e) => atualizarValor(bloco.id, e.target.value)}
-            className="w-full p-2 border rounded mt-1"
+            className="w-full p-2 bg-cyber-bg border border-cyber-border rounded mt-1 text-cyber-surface focus:border-cyber-cyan focus:outline-none transition-colors"
             placeholder={`Conteúdo do ${bloco.type}`}
           />
           <button
             type="button"
             onClick={() => removerCampo(bloco.id)}
-            className="text-red-500 text-xs mt-1"
+            className="text-red-400 hover:text-red-300 text-xs mt-1 cursor-pointer"
           >
             Remover
           </button>

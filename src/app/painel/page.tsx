@@ -27,8 +27,8 @@ export default async function Painel({ searchParams }: PageProps) {
   if (isAuthenticated) {
     const name = params.Login;
     return (
-      <main className={`${MontserratFont.className} min-h-screen bg-gray-100`}>
-        <h3 className="container text-[18px] font-bold mb-6 text-gray-800">Bem vindo ao Painel {name}</h3>
+      <main className={`${MontserratFont.className} min-h-screen bg-cyber-bg py-8`}>
+        <h3 className="container text-[18px] font-bold mb-6 text-cyber-text-main">Bem vindo ao Painel {name}</h3>
         <PainelAdicionaNoticias />
       </main>
     );
@@ -37,7 +37,7 @@ export default async function Painel({ searchParams }: PageProps) {
   // ESTADO 2: Usuário clicou em Cadastrar -> Renderiza o Formulário de Cadastro
   if (view === 'cadastrar') {
     return (
-      <main className={`${MontserratFont.className} min-h-screen bg-gray-100 flex items-center justify-center`}>
+      <main className={`${MontserratFont.className} min-h-screen bg-cyber-bg flex items-center justify-center`}>
         <FormCadastrar />
       </main>
     );
@@ -45,7 +45,7 @@ export default async function Painel({ searchParams }: PageProps) {
 
   // ESTADO 3 (Padrão): Usuário não autenticado -> Renderiza o Login
   return (
-    <main className={`${MontserratFont.className} min-h-screen bg-gray-100 flex items-center justify-center`}>
+    <main className={`${MontserratFont.className} min-h-screen bg-cyber-bg flex items-center justify-center`}>
       <Login />
     </main>
   );

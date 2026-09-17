@@ -15,46 +15,46 @@ const MontserratFont = Montserrat({
 
 export async function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <form action={validarLogin} className="max-w-md w-full bg-white p-6 rounded shadow-md space-y-4">
-        <h2 className="text-xl font-bold text-gray-800">Acesso ao Painel</h2>
+    <div className="w-full max-w-md p-4">
+      <form action={validarLogin} className="w-full bg-cyber-surface border border-cyber-border p-6 rounded shadow-lg space-y-4">
+        <h2 className="text-xl font-bold text-cyber-text-main border-l-4 border-cyber-cyan pl-3">Acesso ao Painel</h2>
 
         <div>
-          <label className="block text-sm font-semibold mb-1">Usuário</label>
+          <label className="block text-sm font-semibold mb-1 text-cyber-text-muted">Usuário</label>
           <input
             type="text"
             name="username"
             required
-            className="w-full p-2 border rounded"
+            className="w-full p-2 bg-cyber-bg border border-cyber-border rounded text-cyber-surface focus:border-cyber-cyan focus:outline-none transition-colors"
             placeholder="Digite seu usuário"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold mb-1">Senha</label>
+          <label className="block text-sm font-semibold mb-1 text-cyber-text-muted">Senha</label>
           <input
             type="password"
             name="password"
             required
-            className="w-full p-2 border rounded"
+            className="w-full p-2 bg-cyber-bg border border-cyber-border rounded text-cyber-surface focus:border-cyber-cyan focus:outline-none transition-colors"
             placeholder="••••••••"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700"
+          className="w-full bg-cyber-cyan text-black font-bold py-2 rounded hover:bg-cyber-cyan-hover transition-colors cursor-pointer"
         >
           Entrar
         </button>
-      </form>
 
-      <p className="mt-4 text-sm text-center">
-        Não tem conta?{' '}
-        <Link href="/painel?view=cadastrar" className="text-blue-600 font-semibold underline">
-          Cadastrar-se
-        </Link>
-      </p>
+        <p className="mt-4 text-sm text-center text-cyber-text-muted">
+          Não tem conta?{' '}
+          <Link href="/painel?view=cadastrar" className="text-cyber-cyan font-semibold hover:underline">
+            Cadastrar-se
+          </Link>
+        </p>
+      </form>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 export default function Footer() {
     return (
-        <footer className="bg-[#0F172A] py-[20px] text-white">
+        <footer className="bg-cyber-header border-t border-cyber-border py-[20px] text-cyber-text-muted">
             <p className="text-center font-medium">&copy; Todos os direitos reservados</p>
         </footer>
     );

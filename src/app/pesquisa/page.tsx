@@ -28,16 +28,16 @@ export default async function Pesquisa({
   
   return (
     <div className={MontserratFont.className}>
-      <main className="min-h-screen bg-gray-100 py-12 px-4">
+      <main className="min-h-screen bg-cyber-bg py-12 px-4">
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="container">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8 border-l-4 border-[#0AACDC] pl-4">
+            <h2 className="text-2xl font-bold text-cyber-text-main mb-8 border-l-4 border-cyber-cyan pl-4">
               Resultados da Pesquisa
             </h2>
             
-            <div className="bg-white p-8 rounded-[5px] shadow-sm border border-gray-200">
-              <p className="text-gray-600 text-lg">
-                Você pesquisou por: <span className="font-bold text-[#0AACDC]">"{termo}"</span>
+            <div className="bg-cyber-surface p-8 rounded-[5px] shadow-sm border border-cyber-border">
+              <p className="text-cyber-text-muted text-lg">
+                Você pesquisou por: <span className="font-bold text-cyber-neon">"{termo}"</span>
               </p>
             </div>
           </div>

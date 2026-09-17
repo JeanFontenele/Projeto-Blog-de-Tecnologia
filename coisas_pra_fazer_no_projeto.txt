@@ -12,8 +12,14 @@ Estilizar a seção destaque para a imagem que aparece dentro do slide carrossel
 
 Formatar data nos posts para organizar array de noticias de forma decrescente. (Feito)
 
-Criar painel administrativo para adicionar as noticias.
+Criar painel administrativo para adicionar as noticias.(Feito)
 
 Fazer conexão com banco de dados mongodb e criar coleção de documentos para armazenar numero de clicks em determinada noticia e linkar com a noticia do arquivo json criando id dentro do json para linkar com o numero de clicks na tabela. 
 
-estilizar a seção destaque da home deixando o papel de parede mais escuro. Melhorar formulário de login deixando o form com largura reduzida.
+Criar mecanismo de pesquisa de acordo com o que se digita na input.
+
+estilizar a seção destaque da home deixando o papel de parede mais escuro. Melhorar formulário de login deixando o form com largura reduzida.(Feito)
+
+Criar esquema no painel para apagar noticia existente ou edita-la.
+
+Ajustar os textos de lista "ul" pois não está renderizando na pagina.(Feito)
