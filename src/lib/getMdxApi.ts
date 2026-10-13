@@ -48,7 +48,7 @@ export async function getAllPosts() {
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const dados = JSON.parse(fileContents);
-      console.log(dados)
+      //console.log(dados)
       const [nomeSlug, tema] = slug.split("_");
 
       // Extrai os metadados do topo do arquivo

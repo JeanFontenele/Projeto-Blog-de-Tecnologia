@@ -16,7 +16,6 @@ const MontserratFont = Montserrat({
 export async function PainelAdicionaNoticias() {
     
     const conteudoArr: any[] = [];
-    console.log()
 
     async function criarNoticia(formData: FormData) {
         'use server';

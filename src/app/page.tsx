@@ -97,6 +97,7 @@ export default async function Home(){
 
                 <div className="p-6 space-y-5">
                   {posts.slice(0, 4).map((item,index) => {
+                    console.log(item.slug)
                     return(
                       <Link href={`/noticias/${item.slug}`} key={index}>
                       <div key={index} className="box-reviews flex-shrink-0 group cursor-pointer mt-[35px] flex gap-4 items-center">

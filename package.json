@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "build:index": "node scripts/build_index.ts",
+    "dev": "npm run build:index && next dev",
+    "build": "npm run build:index && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "fuse.js": "^7.5.0",
     "gray-matter": "^4.0.3",
     "mongoose": "^9.9.3",
     "next": "16.2.4",

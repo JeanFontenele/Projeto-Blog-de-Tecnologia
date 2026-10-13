@@ -19,8 +19,6 @@ const bulletsCarrossel = {
 export default function DestaqueCarrossel({noticiaDestaque}:{noticiaDestaque:any[]}){
     const [index, setIndex] = useState(0);
 
-    //console.log(noticiaDestaque)
-    //console.log(noticiaDestaque[index].nomeArquivo)
     
     useEffect(() => {
         // Garante que o timer não rode se o array estiver vazio

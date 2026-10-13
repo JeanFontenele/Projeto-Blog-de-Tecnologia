@@ -11,7 +11,7 @@ export default async function paginaNoticias(){
 
     const posts:any[] = await getAllPosts();
     //const tamanhoArr:number = posts.length;
-    console.log(posts)
+    //console.log(posts)
     
 
     return(

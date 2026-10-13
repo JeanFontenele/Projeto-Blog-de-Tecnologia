@@ -32,14 +32,14 @@ export default function RenderizaNoticia({ conteudo }: RenderProps) {
             case 'subtitulo':
             case 'h2':
               return (
-                <h2 key={index} className="text-2xl font-bold text-cyber-neon mt-6 mb-6">
+                <h2 key={index} className="text-2xl font-bold text-cyber-text-muted mt-6 mb-6">
                   {bloco.value}
                 </h2>
               );  
             case 'subtitulo2':
             case 'h3':
               return (
-                <h3 key={index} className="text-xl font-bold text-cyber-neon mt-10 mb-10">
+                <h3 key={index} className="text-xl font-bold text-cyber-text-muted mt-10 mb-10">
                   {bloco.value}
                 </h3>
               );  

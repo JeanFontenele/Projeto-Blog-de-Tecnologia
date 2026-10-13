@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "007-first-light-e-uma-surpresa_games",
+    "title": "Lorem Ipsum Dolor Sit Amet",
+    "date": "26/05/2026",
+    "category": "Games",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://images.pexels.com/photos/28824342/pexels-photo-28824342.jpeg?_gl=1*1hkx0ch*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzEzMjUkajM5JGwwJGgw"
+  },
+  {
+    "slug": "amd-amplia-linha-ryzen-200_tecnologia",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "06/07/2026",
+    "category": "Tecnologia",
+    "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://images.pexels.com/photos/34804007/pexels-photo-34804007.jpeg?_gl=1*1gc5gcz*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzIxNDMkajQxJGwwJGgw"
+  },
+  {
+    "slug": "cpu-nova-lake-s-com-12-nucleos-xe-no-desktop-teria-sido-adiada-para-razor-lake-s_tecnologia",
+    "title": "CPU Nova Lake-S com 12 núcleos Xe no desktop teria sido \"adiada\" para Razor Lake-S",
+    "date": "15/09/2026",
+    "category": "Tecnologia",
+    "excerpt": "Insider que primeiro falou de possível Nova Lake-S com 12 núcleos Xe3P agora diz que CPU passou para outra família da Intel",
+    "image": "https://www.adrenaline.com.br/wp-content/uploads/2026/09/intel-nova-lake-12-nucleos-xe-adia-razor-lake-912x569.jpg"
+  },
+  {
+    "slug": "ex-naughty-dog-nao-quer-remakes-de-uncharted_games",
+    "title": "Ex-Naughty Dog não quer remakes de Uncharted",
+    "date": "14/08/2026",
+    "category": "Games",
+    "excerpt": "Refazer Uncharted seria um caça-níquel barato, defende veterano da indústria.",
+    "image": "https://flowgames.gg/wp-content/uploads/2024/02/uncharted-drakes-fortune.jpg"
+  },
+  {
+    "slug": "gigabyte-lanca-notebooks-gamer_tecnologia",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "06/07/2026",
+    "category": "Tecnologia",
+    "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://images.pexels.com/photos/4491606/pexels-photo-4491606.jpeg?_gl=1*128003v*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzIyNTEkajEkbDAkaDA."
+  },
+  {
+    "slug": "god-of-war-laufey-tera-tyr-sugere-falas-de-dublador_games",
+    "title": "God of War Laufey terá Tyr, sugere falas de dublador",
+    "date": "15/08/2026",
+    "category": "Games",
+    "excerpt": "As declarações de um dublador português deram a entender que Tyr estará em God of War Laufey",
+    "image": "https://flowgames.gg/wp-content/uploads/2026/06/image-2026-06-02T191416.655.jpg"
+  },
+  {
+    "slug": "gta6-mais-barato_games",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "26/07/2026",
+    "category": "Games",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://images.pexels.com/photos/7862595/pexels-photo-7862595.jpeg?_gl=1*1x96047*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzIzMTYkajIxJGwwJGgw"
+  },
+  {
+    "slug": "mercado-global-de-pcs-recua_tecnologia",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "06/07/2026",
+    "category": "Tecnologia",
+    "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://images.pexels.com/photos/8622911/pexels-photo-8622911.jpeg?_gl=1*u6hbnn*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI0NDYkajQzJGwwJGgw"
+  },
+  {
+    "slug": "meu-pc-roda-cinder-city_games",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "30/07/2026",
+    "category": "Games",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://images.pexels.com/photos/17576302/pexels-photo-17576302.jpeg?_gl=1*cn4dax*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI0ODAkajkkbDAkaDA."
+  },
+  {
+    "slug": "playstation-4-emulador-comeca-a-rodar-outro-classico-no-pc_games",
+    "title": "PlayStation 4: emulador começa a rodar outro clássico no PC",
+    "date": "15/08/2026",
+    "category": "Games",
+    "excerpt": "O ShadPS4, emulador do PlayStation 4, começou a rodar outro clássico do console da Sony no PC. Confira!",
+    "image": "https://flowgames.gg/wp-content/uploads/2026/01/PlayStation-4.jpg"
+  },
+  {
+    "slug": "ram-salgada_tecnologia",
+    "title": "Consectetur Adipiscing Elit",
+    "date": "29/07/2026",
+    "category": "Tecnologia",
+    "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://images.pexels.com/photos/326511/pexels-photo-326511.jpeg?_gl=1*28f1l4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI1OTAkajQ1JGwwJGgw"
+  },
+  {
+    "slug": "sony-vendeu-10-milhoes-de-jogos_games",
+    "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+    "date": "19/07/2026",
+    "category": "Games",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://images.pexels.com/photos/35229318/pexels-photo-35229318.jpeg?_gl=1*q5a9g4*_ga*ODA3MDM2NzM4LjE3ODY0NzEyMzY.*_ga_8JE65Q40S6*czE3ODY0NzEyMzYkbzEkZzEkdDE3ODY0NzI2NzckajU5JGwwJGgw"
+  }
+]
